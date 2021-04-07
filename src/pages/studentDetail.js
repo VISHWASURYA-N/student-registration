@@ -8,6 +8,9 @@ const StudentDetails= () => {
  const history = useHistory();
  const dispatch=useDispatch()
 const students=useSelector(state=>(state.studentRegistor));
+const themeToggle=useSelector(state=>(state.themeToggle))
+const {isLightTheme,dark,light}=themeToggle
+const theme=isLightTheme ? light :dark
 function handleDelete(){
   dispatch({type:types.remove_details,id})
   history.push("/home")
@@ -20,7 +23,7 @@ function handleDelete(){
   <div className="student-details">
     <Navbar/>
     {student.map(student=>(
- <article>
+ <article style={{background:theme.background,color:theme.color}}>
  <h2>{ student.name }</h2>
   <h3>{student.age}</h3>
  <p>{ student.branch }</p>

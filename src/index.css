@@ -7,6 +7,7 @@
 .App{
   max-width: 600px;
   text-align: center;
+  white-space:wrap;
   margin: 0 auto;
 }
 .navbar {
@@ -41,6 +42,7 @@
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
+  max-width: 600px;
 }
 .student-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
@@ -61,6 +63,8 @@
 }
 .student-details div {
   margin: 20px 0;
+  max-width: 600px;
+  white-space:wrap;
 }
 .student-details button {
   background: #f1356d;

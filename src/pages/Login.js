@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
+import types from '../action/types/types'
 
 const Login = () => {
 const[username,SetUsername]=useState("")
@@ -9,7 +10,7 @@ const history=useHistory()
 const dispatch=useDispatch()
 function handleFormSubmit(e){
 e.preventDefault();
-dispatch({type:"LOGGIN",payload:{username,password}})
+dispatch({type:types.login,payload:{username,password}})
 SetUsername("")
 SetPassword("")
 history.push("/home")

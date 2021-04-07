@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
 import { useHistory } from "react-router-dom";
+import types from "../action/types/types";
 
 const Create = () => {
   const dispatch=useDispatch()
@@ -12,11 +13,11 @@ const Create = () => {
   const [branch, setBranch] = useState('');
   const history=useHistory()
   
-//   const history = useHistory();
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({type:"ADD_DETAIL",payload:{id:uuidv4(), name:name,age:age,email:email,branch:branch,review:review}})
+    dispatch({type:types.add_details,payload:{id:uuidv4(), name:name,age:age,email:email,branch:branch,review:review}})
     console.log({name,age,email,review,branch,})
     setBranch("")
     setEmail("")

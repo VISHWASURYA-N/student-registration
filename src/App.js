@@ -1,10 +1,9 @@
 import './App.css';
-import Create from './component/createStudent';
-import Home from './component/home';
-import Navbar from './component/navbar';
+import Create from './pages/createStudent';
+import Home from './pages/home';
 import {BrowserRouter as Router, Switch,Route } from "react-router-dom"
-import StudentDetails from './component/studentDetail';
-import Login from './component/Login';
+import StudentDetails from './pages/studentDetail';
+import Login from './pages/Login';
 
 function App() {
   return (

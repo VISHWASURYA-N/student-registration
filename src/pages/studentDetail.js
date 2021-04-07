@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
+import types from "../action/types/types";
 import Navbar from "./navbar";
 
 const StudentDetails= () => {
@@ -8,7 +9,7 @@ const StudentDetails= () => {
  const dispatch=useDispatch()
 const students=useSelector(state=>(state.studentRegistor));
 function handleDelete(){
-  dispatch({type:"REMOVE_DETAIL",id})
+  dispatch({type:types.remove_details,id})
   history.push("/home")
 }
   let student=students.filter(student=>(student.id===id))

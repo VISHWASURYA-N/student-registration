@@ -1,11 +1,13 @@
+import types from "./types/types"
 const user={
     islogin:true,
     userName:"",
     password:""
 }
+
  function Login(state=user,action){
 switch(action.type){
-    case "LOGGIN":return(
+    case types.login:return(
         {
             ...state,
             islogin:state.islogin,
@@ -15,7 +17,8 @@ switch(action.type){
         }
     )
   
-    default:return({state})
+    default:return(state)
+    
 
 }
 }

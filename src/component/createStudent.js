@@ -28,6 +28,7 @@ const Create = () => {
 
   return (
     <div className="create">
+      <div><button className="delete" onClick={()=>{history.push("/home")}}>X</button></div>
       <h2>Add Student Details</h2>
       <form onSubmit={handleSubmit}>
         <label>NAME:</label>
